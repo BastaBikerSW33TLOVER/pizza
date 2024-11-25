@@ -1,0 +1,77 @@
+body {
+    background-color: #f9d48e; 
+}
+.sidebar {
+    background-color: #f4a747; 
+    height: 200%;
+    border-right: 1px solid #ccc;
+}
+.nav-link {
+    color: #fff;
+    margin-bottom: 15px;
+}
+.nav-link:hover {
+    background-color: #ffcc80;
+    border-radius: 10px;
+}
+.main-content {
+    background-color: #f4e3b0;
+}
+.recommendation {
+    background-color: #f0f0f0d8; 
+    border: 1px solid #ddddddaa; 
+    border-radius: 10px; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+}
+.recommendation h5 {
+    margin-bottom: 20px; 
+}  
+.recommendation .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+.card-img-left {
+    border: 5px solid #ddd; 
+    border-radius: 5px; 
+    margin-right: 15px; 
+}
+.recommendation .card img {
+    width: 50%; 
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 5px; 
+    overflow: hidden; 
+}
+.recommendation .card-body {
+    padding: 15px;
+    text-align: center; 
+}
+.recommendation .card-title {
+    font-size: 1.1rem; 
+    font-weight: 600; 
+    margin-bottom: 10px;
+}
+.recommendation .card-text {
+    font-size: 1rem; 
+    color: #555; 
+}
+.product-section {
+    background-color: #6e4e3c; 
+    padding: 20px; 
+    border-radius: 8px; 
+}
+.product-card {
+    margin-bottom: 2px; 
+    background-color: #ddddddaa;
+    color: white;
+}
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.product-card .card-title, .product-card .card-text {
+    text-align: center;
+    font-weight: bold;
+}
+

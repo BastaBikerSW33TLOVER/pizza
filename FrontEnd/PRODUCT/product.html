@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCT</title>
+    <link rel="icon" type="assets/png" href="assets/Pizza logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row vh-100">
+            <!-- Sidebar -->
+            <nav class="col-2 p-3 sidebar">
+                <div class="text-center mb-4">
+                    <img src="assets/Pizza logo.jpg" alt="Pizza Logo" class="img-fluid mb-2">   
+                </div>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#"><i class="bi bi-house-door-fill"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="/About/about.html"><i class="bi bi-info-circle-fill"></i> About</a>
+                    </li>   
+                </ul>
+                <div class="mt-auto">
+                    <a class="nav-link text-dark" href="/LOGIN/login.html"><i class="bi bi-box-arrow-left"></i> Log out</a>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <div class="col-10 p-4 main-content">
+                <!-- Search and Recommendations -->
+                <div class="mb-4">
+                    <input type="text" class="form-control w-25" placeholder="Search">
+                </div>
+                    <div class="recommendation p-3 mb-4">
+                        <h5>Recommendations</h5>
+                        <div class="row row-cols-1 row-cols-md-4 g-3">
+                            <div class="col">
+                                <div class="card h-100 d-flex flex-row">
+                                    <img src="assets/pizza cheese melted.jpg" class="card-img-top" alt="Pizza">
+                                    <div class="card-body p-2">
+                                        <p class="card-title">Pizza Cheese Melted</p>
+                                        <p class="card-text">150.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100 d-flex flex-row">
+                                    <img src="assets/Ham-and-Cheese-Pizza.jpg" class="card-img-top" alt="Pizza">
+                                    <div class="card-body p-2">
+                                        <p class="card-title">Ham and Cheese</p>
+                                        <p class="card-text">120.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="col">
+                            <div class="card h-100 d-flex flex-row">
+                                <img src="assets/hawaiian.jpg" class="card-img-top" alt="Pizza">
+                                <div class="card-body p-2">
+                                    <p class="card-title">Hawaiian Pizza</p>
+                                    <p class="card-text">110.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 d-flex flex-row">
+                                <img src="assets/cheesy beef with bacon.jpg" class="card-img-top" alt="Veggie Pizza">
+                                <div class="card-body p-2">
+                                    <p class="card-title">Cheesy Beef with bacon</p>
+                                    <p class="card-text">140.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Section -->
+                <div class="product-section">
+                <h4 class="mb-4 text-center">PRODUCT</h4>
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <!-- Product Cards -->
+                    <div class="col">
+                        <div class="card product-card">
+                            <img src="assets/pizza cheese melted.jpg" class="card-img-top" alt="Pizza">
+                            <div class="card-body">
+                                <p class="card-title">Pizza Cheese Melted</p>
+                                <p class="card-text">150.00</p>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#buyNowModal">
+                                    Buy Now
+                                  </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card product-card">
+                            <img src="assets/hawaiian.jpg" class="card-img-top" alt="Pizza">
+                            <div class="card-body">
+                                <p class="card-title">Hawaiian Pizza</p>
+                                <p class="card-text">110.00</p>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#buyNowModal">
+                                    Buy Now
+                                  </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card product-card">
+                            <img src="assets/Ham-and-Cheese-Pizza.jpg" class="card-img-top" alt="Pizza">
+                            <div class="card-body">
+                                <p class="card-title">Ham and Cheese</p>
+                                <p class="card-text">120.00</p>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#buyNowModal">
+                                    Buy Now
+                                  </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card product-card">
+                            <img src="assets/Ham and Beef.jpg" class="card-img-top" alt="Pizza">
+                            <div class="card-body">
+                                <p class="card-title">Ham and Beef</p>
+                                <p class="card-text">120.00</p>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#buyNowModal">
+                                    Buy Now
+                                  </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card product-card">
+                            <img src="assets/beef with mushroom.jpg" class="card-img-top" alt="Pizza">
+                            <div class="card-body">
+                                <p class="card-title">Beef with mushrooms</p>
+                                <p class="card-text">120.00</p>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#buyNowModal">
+                                    Buy Now
+                                  </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card product-card">
+                            <img src="assets/cheesy beef with bacon.jpg" class="card-img-top" alt="Pizza">
+                            <div class="card-body">
+                                <p class="card-title">Cheesy beef with bacon</p>
+                                <p class="card-text">120.00</p>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#buyNowModal">
+                                    Buy Now
+                                  </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card product-card">
+                            <img src="assets/bacon overload.jpg" class="card-img-top" alt="Pizza">
+                            <div class="card-body">
+                                <p class="card-title">Bacon Overload</p>
+                                <p class="card-text">120.00</p>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#buyNowModal">
+                                    Buy Now
+                                  </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card product-card">
+                            <img src="assets/pepperoni.jpg" class="card-img-top" alt="Pizza">
+                            <div class="card-body">
+                                <p class="card-title">Pepperoni</p>
+                                <p class="card-text">120.00</p>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#buyNowModal">
+                                    Buy Now
+                                  </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card product-card">
+                            <img src="assets/veggies pizza.jpg" class="card-img-top" alt="Pizza">
+                            <div class="card-body">
+                                <p class="card-title">veggies Pizza</p>
+                                <p class="card-text">120.00</p>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#buyNowModal">
+                                    Buy Now
+                                  </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="buyNowModalLabel">Buy Now:</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <!-- Purchase Form -->
+                              <form class="row g-3">
+                                <div class="col-md-4">
+                                  <label for="validationDefault01" class="form-label">Fullname</label>
+                                  <input type="text" class="form-control" id="validationDefault01"  required>
+                                </div>
+                                <div class="col-md-6">
+                                  <label for="validationDefault03" class="form-label">Contact Number</label>
+                                  <input type="Contact" class="form-control" id="Contact" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="validationDefault03" class="form-label">Quantity</label>
+                                    <input type="number" class="form-control" id="number" required>
+                                  </div>
+                                <div class="col-md-6">
+                                  <label for="validationDefault03" class="form-label">Shipping Address</label>
+                                  <input type="text" class="form-control" id="validationDefault03" required>
+                                </div>
+                                <div class="col-12">
+                                  <button class="btn btn-light" data-bs-dismiss="modal" >Cancel </button>
+                                  <button class="btn btn-danger" type="submit" href="/index.html">Buy Now</button>
+                                </div>
+                              </form>
+                            </div> 
+                </div>
+            </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</body>
+</html>
