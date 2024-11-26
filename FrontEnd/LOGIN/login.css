@@ -1,0 +1,51 @@
+body {
+    background-color: #f9d48e; 
+    background-image: url('assets/bg.jpg'); 
+    background-image:cover(); 
+    background-position: center;
+    background-repeat: no-repeat; 
+    height: 100vh; 
+}
+.custom-card {
+    background-color: #f4a747; 
+    border-radius: 25px; 
+    width: 100%;
+    max-width: 400px;
+    border: none; 
+}
+h2 {
+    color: #000000; 
+    font-weight: bold; 
+}
+.custom-input {
+    border-radius: 10px; 
+    border: 1px solid #ddd; 
+}
+.custom-btn {
+    background-color: #f8b650; 
+    border: none; 
+    border-radius: 10px; 
+    color: #000; 
+    font-weight: bold;
+}
+.custom-btn:hover {
+    background-color: #f2a93f; 
+    color: white; 
+}
+
+.form-check-label {
+    color: #000; 
+}
+a {
+    text-decoration: none; 
+    color: #000; 
+}
+a:hover {
+    text-decoration: underline;
+    color: #f8b650; 
+}
+@media (max-width: 576px) {
+    .custom-card {
+        padding: 20px; 
+    }
+}
