@@ -1,47 +1,32 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const dotenv = require("dotenv");
-const bodyParser = require("body-parser");
+require('dotenv').config()
 
-const orderRoutes = require("./routes/orders");
-const authRoutes = require("./routes/auth");
+const express = require('express')
+const mongoose = require('mongoose')
+const orderRoutes = require('./routes/orders')
 
-dotenv.config();
+// express app 
+const app = express()
 
-const app = express();
-const port = process.env.PORT || 3000;
+// middleware
+app.use(express.json())
 
-app.use(bodyParser.json());
+app.use((req, res, next) => {
+    console.log(req.path, req.method)
+    next()
+})
 
-const MONGODB_URI = 'mongodb://localhost:27017/pizza';
+// routes
+app.use('/api/orders',orderRoutes)
 
-  mongoose.connect(MONGODB_URI)
-  .then(() => console.log('MongoDB connected successfully!'))
-  .catch((err) => console.error('MongoDB connection error:', err));
+// connect to db
+mongoose.connect(process.env.MONGO_URI)
+    .then(() => {
+        // listen for requests
+        app.listen(process.env.PORT, () => {
+            console.log('connected to db & listening on port', process.env.PORT)
+})
 
-
-
-  
-// Routes
-app.use("/api/orders", orderRoutes);
-app.use("/api/auth", authRoutes);
-
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-  console.log('working na ang kupal');
-
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-//MONGODB_URI=mongodb://localhost/pizza
+    })
+    .catch((error) => {
+        console.log(error)
+    })
