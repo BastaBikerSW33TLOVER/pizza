@@ -1,5 +1,5 @@
 const express = require("express");
-//const Order = require("./models/Order");
+const Order = require("../models/Order");
 const authMiddleware = require("../middleware/auth");
 const router = express.Router();
 
@@ -10,6 +10,7 @@ router.post("/", authMiddleware, async (req, res) => {
   const newOrder = new Order({
     customerName,
     address,
+    items,
     pizza,
     totalAmount,
     paymentStatus: "Pending", // Assuming payment is pending initially
@@ -48,7 +49,7 @@ router.get("/:id", authMiddleware, async (req, res) => {
     if (order.customerName !== req.user.name && req.user.role !== "admin") {
       return res.status(403).json({ message: "Unauthorized access" });
     }
-
+ 
     res.json(order);
   } catch (error) {
     res.status(500).json({ message: "Error fetching order", error });
