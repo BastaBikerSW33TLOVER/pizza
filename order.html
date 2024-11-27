@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="shortcut icon" type="image" href="assets/Pizza logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="order.css">
+  </head>
+  <body>
+    <div class="grid-container">
+      <header class="header">
+      </header>
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <span class="material-icons-outlined">shopping_cart</span> STORE
+          </div>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="#"></a>
+              <span class="material-icons-outlined">dashboard</span> Dashboard
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a>
+              <span class="material-icons-outlined">inventory_2</span> Orders
+            </a>
+          </li>
+      </aside>
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title" >
+          <h2>Orders</h2>
+        </div>
+        <table class="table table-dark table-striped-columns table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Fullname</th>
+              <th scope="col">ContactNumber</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">ShippingAddress</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GeorgeAdiz</td>
+              <td>09453276219</td>
+              <td>1</td>
+              <td>Dacanlao, Calaca City, Batangas</td>
+              <td>
+                <button type="button" class="btn btn-success" onclick="confirmOrder('GeorgeAdiz')">Confirm</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Mang Tomas</td>
+              <td>09453276654</td>
+              <td>4</td>
+              <td>Camastilisan, Calaca City, Batangas</td>
+              <td>
+                <button type="button" class="btn btn-success" onclick="confirmOrder('Mang Tomas')">Confirm</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div id="confirmModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Confirm Order</h2>
+            <p id="modalText">Are you sure you want to confirm this order?</p>
+            <button class="btn btn-success" onclick="finalizeOrder()">Yes, Confirm</button>
+            <button class="btn btn-light" onclick="closeModal()">Cancel</button>
+          </div>
+        </div>
+        
+      </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+    <script src="order.js"></script>
+  </body>
+</html>
