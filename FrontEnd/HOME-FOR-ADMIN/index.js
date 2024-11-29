@@ -17,6 +17,8 @@ function closeSidebar() {
   }
 }
 
+
+
 // ---------- CHARTS ----------
 
 // BAR CHART
