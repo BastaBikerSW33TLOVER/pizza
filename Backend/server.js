@@ -1,32 +1,45 @@
+require('dotenv').config();
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
 
-require('dotenv').config()
-const express = require('express')
-const mongoose = require('mongoose')
-const orderRoutes = require('./routes/orders')
+// Import routes
+const orderRoutes = require('./routes/orders');
+const registerRoutes = require('./routes/register');
+const loginRoutes = require('./routes/login');
 
-// express app 
-const app = express()
+// Express app
+const app = express();
+const PORT = process.env.PORT || 5000;
 
-// middleware
-app.use(express.json())
+// Middleware
+app.use(express.json()); // Parses incoming JSON requests
+app.use(cors()); // Enable Cross-Origin Resource Sharing
 
+// Debugging middleware
 app.use((req, res, next) => {
-    console.log(req.path, req.method)
-    next()
-})
+    console.log(`[${new Date().toISOString()}] ${req.method} ${req.path}`);
+    next();
+});
 
-// routes
-app.use('/api/orders',orderRoutes)
+// Routes
+app.use('/api/orders', orderRoutes);
+app.use('/api/register', registerRoutes);
+app.use('/api/login', loginRoutes);
 
-// connect to db
-mongoose.connect(process.env.MONGO_URI)
+// Connect to MongoDB
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/Pizza';
+
+mongoose
+    .connect(MONGODB_URI) // Deprecated options removed
     .then(() => {
-        // listen for requests
-        app.listen(process.env.PORT, () => {
-            console.log('connected to db & listening on port', process.env.PORT)
-})
-
+        console.log('Connected to MongoDB');
+        app.listen(PORT, () => {
+            console.log(`Server is running on http://localhost:${PORT}`);
+        });
     })
     .catch((error) => {
-        console.log(error)
-    })
+        console.error('Error connecting to MongoDB:', error);
+    });
+
+module.exports = app;
