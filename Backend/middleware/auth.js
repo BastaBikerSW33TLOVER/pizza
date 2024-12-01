@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+app.use(express.json());
 
 const authMiddleware = (req, res, next) => {
   const token = req.headers.authorization?.split(" ")[1];
