@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>HOME-FOR-ADMIN</title>
+    <link rel="shortcut icon" type="image" href="assets/Pizza logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="grid-container">
+      <header class="header">
+      </header>
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <span class="material-icons-outlined">shopping_cart</span> STORE
+          </div>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a></a>
+              <span class="material-icons-outlined">dashboard</span> Dashboard
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="/FrontEnd/HOME-FOR-ADMIN/order.html">
+              <span class="material-icons-outlined">inventory_2</span> Orders
+            </a>
+          </li>
+          <li class="sidebar-list-item logout">
+            <a href="/FrontEnd/ADMIN/admin.html">
+              <span class="material-icons-outlined">account_circle</span> Log Out
+            </a>
+          </li>
+      </aside>
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title" >
+          <h2>DASHBOARD</h2>
+        </div>
+        <div class="charts">
+
+          <div class="charts-card">
+            <h2 class="chart-title">TOP 5 SELLING FLAVOR OF PIZZA</h2>
+            <div id="bar-chart"></div>
+          </div>
+
+          <div class="charts-card">
+            <h2 class="chart-title">Purchase and Sales Orders</h2>
+            <div id="area-chart"></div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
